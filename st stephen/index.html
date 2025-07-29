@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>St. Stephen Church - Welcome Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+<a class="navbar-brand d-flex align-items-center">
+  <img src="images/church logo.jpeg" alt="St. Stephen Church Logo" class="logo-img me-2">
+  <span class="fw-bold text-white">St. Stephen Church</span>
+</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="php/events.php">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="hero-section">
+  <div class="floating-elements">
+    <div class="floating-cross">✝</div>
+    <div class="floating-cross">✝</div>
+    <div class="floating-cross">✝</div>
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title">Welcome Home to St. Stephen</h1>
+    <p class="hero-subtitle">A place of worship, community, and spiritual growth where every heart finds peace</p>
+    <div class="cta-buttons">
+      <button class="btn btn-primary-custom">
+        <i class="fas fa-calendar-alt me-2"></i>Join Us Sunday
+      </button>
+      <button class="btn btn-outline-custom">
+        <i class="fas fa-play me-2"></i>Watch Live
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="welcome-section" id="about">
+  <div class="container">
+    <h2 class="section-title">Welcome to Our Church Family</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h4>Service Times</h4>
+          <p class="mb-3">Join us for worship and fellowship</p>
+          <div class="service-times">
+            <p><strong>Sunday Morning:</strong> 6:00 AM & 8:00 AM</p>
+            <p><strong>Wednesday Evening:</strong> 6:30 PM</p>
+            <p><strong>Saturday Youth:</strong> 5:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h4>Upcoming Events</h4>
+          <p class="mb-3">Connect through our community events</p>
+          <button class="btn btn-primary-custom" data-bs-toggle="modal" data-bs-target="#eventsModal">View All Events</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-praying-hands"></i>
+          </div>
+          <h4>Prayer Requests</h4>
+          <p class="mb-3">We're here to pray with you</p>
+          <button class="btn btn-primary-custom">Submit Request</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="countdown-section">
+  <div class="container">
+    <h2 class="section-title text-white">Next Service In</h2>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <div class="countdown-box">
+          <span class="countdown-number" id="days">0</span>
+          <span class="countdown-label">Days</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="countdown-box">
+          <span class="countdown-number" id="hours">0</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="countdown-box">
+          <span class="countdown-number" id="minutes">0</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="countdown-box">
+          <span class="countdown-number" id="seconds">0</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="verse-section">
+  <div class="container">
+    <h2 class="section-title">Daily Inspiration</h2>
+    <div class="verse-card">
+      <i class="fas fa-quote-left quote-icon"></i>
+      <p class="verse-text" id="daily-verse">
+        "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, to give you hope and a future."
+      </p>
+      <p class="verse-reference" id="verse-reference">Jeremiah 29:11</p>
+    </div>
+  </div>
+</section>
+
+<section class="live-section" id="services">
+  <div class="container">
+    <div class="live-indicator">
+      <div class="live-dot"></div>
+      <span>Live Streaming Not Available For now its coming soon</span>
+    </div>
+    <h2 class="section-title text-white">Join Us Online</h2>
+    <p class="lead">Can't make it in person? Watch our services live from anywhere in the world.</p>
+    <div class="mt-4">
+      <button class="btn btn-primary-custom me-3">
+        <i class="fas fa-video me-2"></i>Watch Live Now
+      </button>
+      <button class="btn btn-outline-custom">
+        <i class="fas fa-history me-2"></i>Previous Sermons
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 footer-section">
+        <h5><i class="fas fa-church me-2"></i>St. Stephen Church</h5>
+        <p>A community of faith, hope, and love serving our neighborhood and beyond.</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 footer-section">
+        <h5><i class="fas fa-map-marker-alt me-2"></i>Visit Us</h5>
+        <p>Manyara Road<br>
+        Arusha Town, Ngarenaro<br>
+        Phone: (+255) 765187795 <br>
+        Email: info@ststephenchurch.org</p>
+      </div>
+      <div class="col-lg-4 col-md-6 footer-section">
+        <h5><i class="fas fa-clock me-2"></i>Office Hours</h5>
+        <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+        Saturday: 10:00 AM - 2:00 PM<br>
+        Sunday: Before and after services</p>
+      </div>
+    </div>
+    <hr class="my-4" style="border-color: #444;">
+    <div class="text-center">
+      <p>&copy; 2025 St. Stephen Church | Designed with <i class="fas fa-heart text-danger"></i> and faith</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-to-top" id="scrollToTop">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<div class="modal fade" id="eventsModal" tabindex="-1" aria-labelledby="eventsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eventsModalLabel">Upcoming Events</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="eventsList">
+        <div class="text-center">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p>Loading events...</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registrationModalLabel">Register for Event</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe id="registrationFrame" src="about:blank" style="width: 100%; height: 500px; border: none;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Countdown Timer
+  function updateCountdown() {
+    const now = new Date();
+    const nextSunday = new Date();
+    nextSunday.setDate(now.getDate() + (7 - now.getDay()));
+    nextSunday.setHours(9, 0, 0, 0);
+    
+    if (now.getDay() === 0 && now.getHours() < 9) {
+      nextSunday.setDate(now.getDate());
+    }
+    
+    const timeDiff = nextSunday - now;
+    
+    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+    
+    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+  }
+  
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+  
+  // Scroll to top functionality
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  });
+  
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+  
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.style.background = 'rgba(26, 54, 93, 0.98)';
+    } else {
+      navbar.style.background = 'rgba(26, 54, 93, 0.95)';
+    }
+  });
+  
+  // Daily verse rotation
+  const verses = [
+    {
+      text: "\"For I know the plans I have for you,\" declares the Lord, \"plans to prosper you and not to harm you, to give you hope and a future.\"",
+      reference: "Jeremiah 29:11"
+    },
+    {
+      text: "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
+      reference: "Proverbs 3:5-6"
+    },
+    {
+      text: "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
+      reference: "Romans 8:28"
+    }
+  ];
+  
+  function rotateVerse() {
+    const verseIndex = Math.floor(Date.now() / (1000 * 60 * 60 * 24)) % verses.length;
+    const currentVerse = verses[verseIndex];
+    document.getElementById('daily-verse').textContent = currentVerse.text;
+    document.getElementById('verse-reference').textContent = currentVerse.reference;
+  }
+  
+  rotateVerse();
+  
+  // Card hover effects
+  document.querySelectorAll('.feature-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-10px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0) scale(1)';
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const eventsModal = document.getElementById('eventsModal');
+    const registrationModal = new bootstrap.Modal(document.getElementById('registrationModal'));
+    
+    eventsModal.addEventListener('shown.bs.modal', function() {
+      const eventsList = document.getElementById('eventsList');
+      
+      // Fetch events from the server
+      fetch('php/events.php')
+        .then(response => response.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const eventsContainer = doc.querySelector('.events-container');
+          
+          if (eventsContainer) {
+            // Remove the 'Back to Home' button
+            const backButton = eventsContainer.querySelector('.btn-outline-custom');
+            if (backButton) backButton.remove();
+            
+            // Remove the 'Upcoming Events' heading
+            const pageHeader = eventsContainer.querySelector('.page-header');
+            if (pageHeader) pageHeader.remove();
+            
+            eventsList.innerHTML = eventsContainer.innerHTML;
+            
+            // Add click handlers to all register buttons
+            eventsList.querySelectorAll('.cta-button').forEach(button => {
+              button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const eventId = this.getAttribute('data-event-id') || '';
+                const eventName = this.closest('.event-card').querySelector('.event-title').textContent;
+                
+                // Close the events modal
+                const modal = bootstrap.Modal.getInstance(eventsModal);
+                modal.hide();
+                
+                // Load the registration form in the iframe
+                const frame = document.getElementById('registrationFrame');
+                frame.src = `registration.html?event=${encodeURIComponent(eventId)}&eventName=${encodeURIComponent(eventName)}`;
+                
+                // Show the registration modal
+                registrationModal.show();
+              });
+            });
+          } else {
+            eventsList.innerHTML = '<p class="text-center">No upcoming events found.</p>';
+          }
+        })
+        .catch(error => {
+          console.error('Error loading events:', error);
+          eventsList.innerHTML = '<p class="text-center text-danger">Error loading events. Please try again later.</p>';
+        });
+    });
+    
+    // Handle when registration modal is hidden
+    document.getElementById('registrationModal').addEventListener('hidden.bs.modal', function() {
+      // Reset the iframe source
+      document.getElementById('registrationFrame').src = 'about:blank';
+    });
+  });
+</script>
+</body>
+</html>
